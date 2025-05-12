@@ -5,28 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/productos.css">
 </head>
 <body>
     <header>
-        <div class="logo">Panadería</div>
+        <div class="logo">
+            <a href="/">Panadería Artesanal</a></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="/" aria-current="page">Productos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="cart-btn" aria-label="Ver carrito">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count">0</span>
+            </button>
+        </div>
     </header>
-    <nav>
-        <ul>
-            <li>Con levadura</li>
-            <li>Sin levadura</li>
-            <li>Dulces</li>
-            <li>Integrales</li>
-            <li>Masa madre</li>
-            <li>Planos</li>
-            <li>Rústicos</li>
-            <li>Especiales</li>
-            <li>Cereales</li>
-            <li>Borrar filtro</li>
-        </ul>
-    </nav>
+            <nav>
+            <ul>
+                <li>Con levadura</li>
+                <li>Sin levadura</li>
+                <li>Dulces</li>
+                <li>Integrales</li>
+                <li>Masa madre</li>
+                <li>Planos</li>
+                <li>Rústicos</li>
+                <li>Especiales</li>
+                <li>Cereales</li>
+                <li>Borrar filtro</li>
+            </ul>
+        </nav>
     <main>
-        <section></section> <!-- Con le -->
-        <section></section> <!-- Sin le -->
+        <section>  <!-- CON LEVADURA -->
+            <article class="product-card" id="conle">
+                <img src="images/molde.jpg" alt="Pan de molde" loading="lazy">
+                <h3>Molde</h3>
+                <p>Pan rectangular, suave y esponjoso, con textura aireada.</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </article>
+            <article class="product-card" id="conle">
+                <img src="images/baguette.jpg" alt="Baguette tradicional" loading="lazy">
+                <h3>Baguette</h3>
+                <p>Pan francés crujiente por fuera, suave por dentro.</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </article>
+            <article class="product-card" id="conle">
+                <img src="images/chapata.jpg" alt="Pan de chapata" loading="lazy">
+                <h3>Chapata</h3>
+                <p>Pan italiano con una corteza crujiente y miga aireada.</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </article>
+            <article class="product-card" id="conle">
+                <img src="images/focaccia.jpg" alt="Pan de focaccia" loading="lazy">
+                <h3>Focaccia</h3>
+                <p>Pan plano italiano, muy aceitado.</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </article>
+            <article class="product-card">
+                <img src="images/hamburguesa.jpg" alt="Pan de hamburguesa" loading="lazy">
+                <h3>Hamburguesa</h3>
+                <p>Suave, redondo y ligeramente dulce.</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </article>            
+        </section>
+        <section> <!-- SIN LEVADURA -->
+            <article class="product-card" id="sinle">
+                <img src="images/soda.png" alt="Pan de soda" loading="lazy">
+                <h3>Soda</h3>
+                <p> Un pan tradicional irlandés, hecho con bicarbonato de sodio.</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </article>
+            <article class="product-card" id="sinle">
+                <img src="images/pan-maiz.jpg" alt="Pan de maíz" loading="lazy">
+                <h3>Maíz</h3>
+                <p> Hecho con harina de maíz, es denso y ligeramente dulce.</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </article>
+            <article class="product-card" id="sinle">
+                <img src="images/torta.jpg" alt="Pan plano" loading="lazy">
+                <h3>Tortas</h3>
+                <p> Panes como las tortillas mexicanas o el pan de pita.</p>
+                <button class="add-to-cart">Añadir al carrito</button>
+            </article>             
+        </section> 
         <section></section> <!-- Dulces -->
         <section></section> <!-- Inte -->
         <section></section> <!-- MM -->
