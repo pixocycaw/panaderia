@@ -6,14 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let currentPosition = 0;
     const cardWidth = productCards[0].offsetWidth;
-    const gap = 32; // 2rem gap between cards
+    const gap = 32;
     const cardsPerView = Math.floor(carouselTrack.offsetWidth / (cardWidth + gap));
     const maxPosition = productCards.length - cardsPerView;
 
-    // Initialize carousel
     updateCarouselButtons();
 
-    // Event listeners for buttons
     btnLeft.addEventListener('click', () => {
         if (currentPosition > 0) {
             currentPosition--;
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Touch events for mobile
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -47,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (Math.abs(diff) > swipeThreshold) {
             if (diff > 0 && currentPosition < maxPosition) {
-                // Swipe left
+                // Swipe a la izquierda
                 currentPosition++;
             } else if (diff < 0 && currentPosition > 0) {
-                // Swipe right
+                // Swipe a la derecha
                 currentPosition--;
             }
             updateCarouselPosition();
@@ -71,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnRight.style.cursor = currentPosition === maxPosition ? 'not-allowed' : 'pointer';
     }
 
-    // Handle window resize
+    // Manejar el cambio de tamaño de la ventana
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
@@ -88,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 250);
     });
 
-    // Add to cart functionality
+    // Función para agregar al carrito
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     const cartCount = document.querySelector('.cart-count');
     let itemsInCart = 0;
@@ -98,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             itemsInCart++;
             cartCount.textContent = itemsInCart;
             
-            // Add animation
+            // Agregar animación
             button.classList.add('added');
             setTimeout(() => {
                 button.classList.remove('added');
