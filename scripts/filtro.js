@@ -1,119 +1,64 @@
+// Función para mostrar solo productos de una categoría específica
+function mostrarCategoria(categoria) {
+    // Ocultar todos los productos primero
+    const todosProductos = document.querySelectorAll('.product-card');
+    todosProductos.forEach(producto => {
+        producto.style.display = 'none';
+    });
+    
+    // Mostrar solo los productos de la categoría seleccionada
+    const productosCategoria = document.querySelectorAll('.product-card[id="' + categoria + '"]');
+    productosCategoria.forEach(producto => {
+        producto.style.display = 'block';
+    });
+}
+
+// Función para mostrar todos los productos
+function BorrarFiltro() {
+    const todosProductos = document.querySelectorAll('.product-card');
+    todosProductos.forEach(producto => {
+        producto.style.display = 'block';
+    });
+}
+
+// Funciones específicas para cada categoría
 function FiltroConLe() {
-    document.getElementById("conle").hidden = false;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    mostrarCategoria('conle');
 }
 
 function FiltroSinLe() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = false;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    mostrarCategoria('sinle');
 }
 
 function FiltroDulce() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = false;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    mostrarCategoria('dulce');
 }
 
 function FiltroInte() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = false;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    mostrarCategoria('inte');
 }
 
 function FiltroMaMa() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = false;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    mostrarCategoria('mama');
 }
 
 function FiltroPlano() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = false;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    mostrarCategoria('plano');
 }
 
 function FiltroRusti() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = false;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    mostrarCategoria('rusti');
 }
 
 function FiltroEspe() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = false;
-    document.getElementById("cere").hidden = true;
+    mostrarCategoria('espe');
 }
 
 function FiltroCere() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = false;
+    mostrarCategoria('cere');
 }
 
-function BorrarFiltro() {
-    document.getElementById("conle").hidden = false;
-    document.getElementById("sinle").hidden = false;
-    document.getElementById("dulce").hidden = false;
-    document.getElementById("inte").hidden = false;
-    document.getElementById("mama").hidden = false;
-    document.getElementById("plano").hidden = false;
-    document.getElementById("rusti").hidden = false;
-    document.getElementById("espe").hidden = false;
-    document.getElementById("cere").hidden = false;
-}
+// Inicializar: asegurarse de que todos los productos son visibles al cargar
+document.addEventListener('DOMContentLoaded', function() {
+    BorrarFiltro();
+});

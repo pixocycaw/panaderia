@@ -36,18 +36,17 @@
             </button>
         </div>
     </header>
-            <nav class="nav-filtro">
-                <button class="btn-filtro" onclick="FiltroConLe()">Con levadura</button>
-                <button class="btn-filtro" onclick="FiltroSinLe()">Sin levadura</button>
-                <button class="btn-filtro" onclick="FiltroDulce()">Dulces</button>
-                <button class="btn-filtro" onclick="FiltroInte()">Integrales</button>
-                <button class="btn-filtro" onclick="FiltroMaMa()">Masa madre</button>
-                <button class="btn-filtro" onclick="FiltroPlano()">Planos</button>
-                <button class="btn-filtro" onclick="FiltroRusti()">Rústicos</button>
-                <button class="btn-filtro" onclick="FiltroEspe()">Especiales</button>
-                <button class="btn-filtro" onclick="FiltroCere()">Cereales</button>
-                <button class="btn-filtro" onclick="BorrarFiltro()">Borrar filtro</button>
-            </ul>
+        <nav class="nav-filtro">
+            <button class="btn-filtro" onclick="FiltroConLe()">Con levadura</button>
+            <button class="btn-filtro" onclick="FiltroSinLe()">Sin levadura</button>
+            <button class="btn-filtro" onclick="FiltroDulce()">Dulces</button>
+            <button class="btn-filtro" onclick="FiltroInte()">Integrales</button>
+            <button class="btn-filtro" onclick="FiltroMaMa()">Masa madre</button>
+            <button class="btn-filtro" onclick="FiltroPlano()">Planos</button>
+            <button class="btn-filtro" onclick="FiltroRusti()">Rústicos</button>
+            <button class="btn-filtro" onclick="FiltroEspe()">Especiales</button>
+            <button class="btn-filtro" onclick="FiltroCere()">Cereales</button>
+            <button class="btn-filtro" onclick="BorrarFiltro()">Borrar filtro</button>
         </nav>
     <main>
         <section>  <!-- CON LEVADURA -->
@@ -75,7 +74,7 @@
                 <p>Pan plano italiano, muy aceitado.</p>
                 <button class="add-to-cart">Añadir al carrito</button>
             </article>
-            <article class="product-card">
+            <article class="product-card" id="conle">
                 <img src="images/hamburguesa.jpg" alt="Pan de hamburguesa" loading="lazy">
                 <h3>Hamburguesa</h3>
                 <p>Suave, redondo y ligeramente dulce.</p>
@@ -251,6 +250,6 @@
 
     <!-- Scripts -->
     <script src="scripts/carrito.js"></script>
-    <script src="/scripts/filtro.js"></script>
+    <script src="scripts/filtro.js"></script>
 </body>
 </html>
