@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Body */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    background-color: #ffffff;
+}
+
+header .logo {
+    justify-self: start;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+header nav {
+    justify-self: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e63946;
+}
+
+header .header-actions {
+    justify-self: end;
+    margin-right: 1rem;
+    font-size: 1rem;
+    color: #999;
+}
+
+
+/* Hero */
+.hero {
+    background: url('lemon-pie-background.webp') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 1rem;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.hero h2 {
+    position: relative;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    position: relative;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero button,
+.hero a {
+    position: relative;
+    background-color: #e63946;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover,
+.hero a:hover {
+    background-color: #d62828;
+}
+
+.hero + .accent-strip {
+    background-color: #d6a14d;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    color: #fff;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.hero h2,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #f6f6f6;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2.25rem;
+    }
+}
