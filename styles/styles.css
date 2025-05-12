@@ -219,3 +219,33 @@ footer {
 .hero, .products-carousel {
     animation: fadeIn 1s ease-out;
 }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Update mobile styles */
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .logo-image {
+        height: 30px;
+    }
+}
