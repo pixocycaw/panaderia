@@ -1,75 +1,75 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Cart functionality
+    // Funcionalidad del carrito
     const cartCount = document.querySelector('.cart-count');
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     
-    // Initialize cart count from localStorage
+    // Inicializar contador del carrito desde localStorage
     let itemsInCart = localStorage.getItem('cartItems') ? parseInt(localStorage.getItem('cartItems')) : 0;
     cartCount.textContent = itemsInCart;
     
-    // Add to cart button click handler
+    // Manejador de clics en botones de añadir al carrito
     addToCartButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Increment cart counter
+            // Incrementar contador del carrito
             itemsInCart++;
             cartCount.textContent = itemsInCart;
             
-            // Save cart count to localStorage
+            // Guardar en localStorage
             localStorage.setItem('cartItems', itemsInCart);
             
-            // Visual feedback animation
+            // Animación de feedback visual
             button.classList.add('added');
             setTimeout(() => {
                 button.classList.remove('added');
             }, 500);
             
-            // Get product information
+            // Obtener información del producto
             const productCard = button.closest('.product-card');
             const productName = productCard.querySelector('h3').textContent;
             const productImage = productCard.querySelector('img').src;
             
-            // You could save the selected products to localStorage as well
-            saveProductToCart(productName, productImage);
+            // Guardar el producto seleccionado en localStorage
+            guardarProductoEnCarrito(productName, productImage);
             
-            // Show confirmation message
-            showConfirmation(productName);
+            // Mostrar mensaje de confirmación
+            mostrarConfirmacion(productName);
         });
     });
     
-    function saveProductToCart(name, image) {
-        // Get existing cart items or initialize empty array
+    function guardarProductoEnCarrito(nombre, imagen) {
+        // Obtener elementos existentes del carrito o inicializar array vacío
         const cartItems = localStorage.getItem('cartProducts') 
             ? JSON.parse(localStorage.getItem('cartProducts')) 
             : [];
         
-        // Add new item
+        // Añadir nuevo elemento
         cartItems.push({
-            name: name,
-            image: image,
+            nombre: nombre,
+            imagen: imagen,
             timestamp: new Date().toISOString()
         });
         
-        // Save back to localStorage
+        // Guardar de vuelta en localStorage
         localStorage.setItem('cartProducts', JSON.stringify(cartItems));
     }
     
-    function showConfirmation(productName) {
-        // Create a temporary message element
-        const message = document.createElement('div');
-        message.classList.add('cart-confirmation');
-        message.textContent = `¡${productName} añadido al carrito!`;
+    function mostrarConfirmacion(nombreProducto) {
+        // Crear un elemento de mensaje temporal
+        const mensaje = document.createElement('div');
+        mensaje.classList.add('cart-confirmation');
+        mensaje.textContent = `¡${nombreProducto} añadido al carrito!`;
         
-        // Add to the body
-        document.body.appendChild(message);
+        // Añadir al body
+        document.body.appendChild(mensaje);
         
-        // Remove after animation
+        // Eliminar después de la animación
         setTimeout(() => {
-            message.classList.add('show');
+            mensaje.classList.add('show');
             
             setTimeout(() => {
-                message.classList.remove('show');
+                mensaje.classList.remove('show');
                 setTimeout(() => {
-                    document.body.removeChild(message);
+                    document.body.removeChild(mensaje);
                 }, 300);
             }, 2000);
         }, 10);

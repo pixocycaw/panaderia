@@ -114,38 +114,64 @@ document.addEventListener('DOMContentLoaded', () => {
             itemsInCart++;
             cartCount.textContent = itemsInCart;
             
-            // Save to localStorage
+            // Guardar en localStorage
             localStorage.setItem('cartItems', itemsInCart);
             
-            // Animation
+            // Animación
             button.classList.add('added');
             setTimeout(() => button.classList.remove('added'), 500);
             
-            // Get product information
+            // Obtener información del producto
             const productCard = button.closest('.product-card');
             const productName = productCard.querySelector('h3').textContent;
             const productImage = productCard.querySelector('img').src;
             
-            // Save product to cart
-            saveProductToCart(productName, productImage);
+            // Guardar producto en carrito
+            guardarProductoEnCarrito(productName, productImage);
+            
+            // Mostrar notificación
+            mostrarConfirmacion(productName);
         });
     });
     
-    function saveProductToCart(name, image) {
-        // Get existing cart items or initialize empty array
+    function guardarProductoEnCarrito(nombre, imagen) {
+        // Obtener elementos existentes del carrito o inicializar array vacío
         const cartItems = localStorage.getItem('cartProducts') 
             ? JSON.parse(localStorage.getItem('cartProducts')) 
             : [];
         
-        // Add new item
+        // Añadir nuevo elemento
         cartItems.push({
-            name: name,
-            image: image,
+            nombre: nombre,
+            imagen: imagen,
             timestamp: new Date().toISOString()
         });
         
-        // Save back to localStorage
+        // Guardar de vuelta en localStorage
         localStorage.setItem('cartProducts', JSON.stringify(cartItems));
+    }
+    
+    // Función para mostrar notificación de confirmación
+    function mostrarConfirmacion(nombreProducto) {
+        // Crear un elemento de mensaje temporal
+        const mensaje = document.createElement('div');
+        mensaje.classList.add('cart-confirmation');
+        mensaje.textContent = `¡${nombreProducto} añadido al carrito!`;
+        
+        // Añadir al body
+        document.body.appendChild(mensaje);
+        
+        // Eliminar después de animación
+        setTimeout(() => {
+            mensaje.classList.add('show');
+            
+            setTimeout(() => {
+                mensaje.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(mensaje);
+                }, 300);
+            }, 2000);
+        }, 10);
     }
     
     // Inicializar el carrusel
