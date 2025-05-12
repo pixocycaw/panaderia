@@ -1,0 +1,9 @@
+.nosotros {
+    display: flex;
+    padding: 5%;
+}
+
+.nosotros-img{
+    width: 70%;
+    padding-left: 10%;
+}
