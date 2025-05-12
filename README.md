@@ -45,6 +45,7 @@ panaderia/
 ├── styles/                 # Archivos CSS
 │   ├── styles.css          # Estilos principales
 │   ├── carousel.css        # Estilos del carrusel
+|   ├── productos.css       # Estilos de productos
 │   ├── notificaciones.css  # Estilos de notificaciones
 │   └── formulario.css      # Estilos específicos del formulario
 ├── scripts/                # Archivos JavaScript
