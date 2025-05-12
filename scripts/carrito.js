@@ -84,4 +84,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, 3000);
     }
+
+    // Función global para mostrar notificaciones desde otros scripts
+    window.mostrarNotificacion = function(mensaje, tipo = 'info') {
+        const noti = document.createElement('div');
+        noti.classList.add('cart-confirmation');
+        if (tipo === 'success') noti.classList.add('success');
+        if (tipo === 'error') noti.classList.add('error');
+        noti.textContent = mensaje;
+        notificacionesContenedor.appendChild(noti);
+        notificacionesContenedor.scrollTop = notificacionesContenedor.scrollHeight;
+        setTimeout(() => {
+            noti.classList.add('removing');
+            noti.addEventListener('animationend', () => {
+                if (notificacionesContenedor.contains(noti)) {
+                    notificacionesContenedor.removeChild(noti);
+                }
+            });
+        }, 3000);
+    };
 }); 

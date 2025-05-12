@@ -1,9 +1,13 @@
 section {
     display: flex;
+    gap: 1.5rem;   
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .nav-filtro {
     display: flex;
     padding: 1%;
+    gap: 1rem;
 }
 .btn-filtro{
     background-color: var(--primary-color);
