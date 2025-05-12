@@ -24,11 +24,11 @@ Este proyecto es una página web completa para una panadería artesanal, diseña
 ### Catálogo de Productos
 ![Catálogo de Productos](./images/screenshots/catalogo.png)
 
+### Página sobre Nosotros
+![nosotros](https://github.com/user-attachments/assets/6c9b6825-b1e9-4c9b-9a44-9b28b6c02a89)
+
 ### Formulario de Contacto
 ![Formulario de Contacto](./images/screenshots/contacto.png)
-
-### Página sobre Nosotros
-![Página sobre Nosotros](./images/screenshots/nosotros.png)
 
 ## Tecnologías Utilizadas
 
@@ -50,6 +50,7 @@ panaderia/
 │   ├── styles.css          # Estilos principales
 │   ├── carousel.css        # Estilos del carrusel
 |   ├── productos.css       # Estilos de productos
+|   ├── nosotros.css        # Estilos sobre nosotros
 │   ├── notificaciones.css  # Estilos de notificaciones
 │   └── formulario.css      # Estilos específicos del formulario
 ├── scripts/                # Archivos JavaScript
