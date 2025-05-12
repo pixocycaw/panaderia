@@ -46,6 +46,9 @@
     overflow: hidden;
     will-change: transform;
     backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
 }
 
 .product-card:hover {
@@ -78,6 +81,7 @@
     color: var(--text-light);
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
+    flex-grow: 1;
 }
 
 .add-to-cart {
@@ -92,6 +96,7 @@
     font-weight: 600;
     transition: var(--transition);
     width: 100%;
+    margin-top: auto;
 }
 
 .add-to-cart:hover {
@@ -170,6 +175,11 @@
     .product-card {
         min-width: 240px;
         max-width: 240px;
+        height: 400px;
+    }
+
+    .product-card img {
+        height: 160px;
     }
 
     .carousel-btn {
