@@ -23,6 +23,9 @@ section {
 .btn-filtro:hover {
     background-color: #4CAF50;
 }
+article.product-card{
+    margin-bottom: 2%;
+}
 .product-card {
     min-width: 280px;
     max-width: 280px;
