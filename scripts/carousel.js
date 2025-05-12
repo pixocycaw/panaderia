@@ -104,17 +104,49 @@ document.addEventListener('DOMContentLoaded', () => {
         centerCarousel(false);
     });
     
-    // Funcionalidad de carrito
+    // Funcionalidad de carrito (modificada para usar localStorage)
+    const cartCount = document.querySelector('.cart-count');
+    let itemsInCart = localStorage.getItem('cartItems') ? parseInt(localStorage.getItem('cartItems')) : 0;
+    cartCount.textContent = itemsInCart;
+    
     document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', () => {
-            const cartCount = document.querySelector('.cart-count');
-            const currentCount = parseInt(cartCount.textContent);
-            cartCount.textContent = currentCount + 1;
+            itemsInCart++;
+            cartCount.textContent = itemsInCart;
             
+            // Save to localStorage
+            localStorage.setItem('cartItems', itemsInCart);
+            
+            // Animation
             button.classList.add('added');
             setTimeout(() => button.classList.remove('added'), 500);
+            
+            // Get product information
+            const productCard = button.closest('.product-card');
+            const productName = productCard.querySelector('h3').textContent;
+            const productImage = productCard.querySelector('img').src;
+            
+            // Save product to cart
+            saveProductToCart(productName, productImage);
         });
     });
+    
+    function saveProductToCart(name, image) {
+        // Get existing cart items or initialize empty array
+        const cartItems = localStorage.getItem('cartProducts') 
+            ? JSON.parse(localStorage.getItem('cartProducts')) 
+            : [];
+        
+        // Add new item
+        cartItems.push({
+            name: name,
+            image: image,
+            timestamp: new Date().toISOString()
+        });
+        
+        // Save back to localStorage
+        localStorage.setItem('cartProducts', JSON.stringify(cartItems));
+    }
     
     // Inicializar el carrusel
     centerCarousel();
