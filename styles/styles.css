@@ -53,7 +53,7 @@ header .header-actions {
 
 /* Hero */
 .hero {
-    background: url('images/bakery_background_1.jpg') center/cover no-repeat;
+    background: url('../images/bakery_background_1.jpg') center/cover no-repeat;
     color: #fff;
     text-align: center;
     padding: 5rem 1rem;
