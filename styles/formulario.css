@@ -1,0 +1,137 @@
+/* Estilos para la página de contacto */
+.contact-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/bakery_background_1.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 8rem 1rem;
+    position: relative;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contenedor del formulario y la información de contacto */
+.contact-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* Estilos del formulario */
+.contact-form {
+    background-color: var(--background-light);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.2);
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Estilos de la información de contacto */
+.contact-info {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.contact-info h2 {
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--primary-color);
+}
+
+.info-item p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* Diseño adaptable */
+@media (max-width: 768px) {
+    .contact-form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-hero p {
+        font-size: 1.1rem;
+    }
+} 
