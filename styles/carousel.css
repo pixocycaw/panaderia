@@ -22,13 +22,10 @@
 .carousel-track {
     display: flex;
     gap: 2rem;
-    transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 0.3s ease;
     padding: 1rem 0;
     will-change: transform;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    -webkit-font-smoothing: antialiased;
+    transform-style: preserve-3d;
 }
 
 .carousel-track.no-transition {
@@ -44,7 +41,7 @@
     padding: 1.5rem;
     text-align: center;
     flex-shrink: 0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
     position: relative;
     overflow: hidden;
     will-change: transform;
@@ -196,4 +193,9 @@
     animation: shimmer 1.5s infinite;
     background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
     background-size: 200% 100%;
+}
+
+/* Simple animation for add to cart */
+.add-to-cart.added {
+    background-color: #4CAF50;
 }
