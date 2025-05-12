@@ -3,40 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla de Panadería</title>
+    <meta name="description" content="Panadería artesanal con productos frescos horneados diariamente">
+    <meta name="keywords" content="panadería, pan, pasteles, repostería, artesanal">
+    <title>Panadería Artesanal</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/carousel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-
     <header>
-        <div class="logo">Panadería</div>
+        <div class="logo">
+            <a href="/">Panadería Artesanal</a>
+        </div>
 
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="filtro.html">Productos</a></li>
+                <li><a href="/" aria-current="page">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
 
         <div class="header-actions">
-            Carrito
+            <button class="cart-btn" aria-label="Ver carrito">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count">0</span>
+            </button>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <h2>Bienvenidos a Nuestra Panadería</h2>
-            <p>Productos recién horneados todos los días.</p>
+            <h1>Bienvenidos a Nuestra Panadería</h1>
+            <p>Productos recién horneados todos los días con ingredientes de la mejor calidad.</p>
+            <a href="/productos" class="cta-button">Ver Productos</a>
+        </section>
+        
+        <section class="products-carousel" aria-label="Nuestros productos destacados">
+            <h2>Nuestros Productos</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn left" aria-label="Productos anteriores">&#10094;</button>
+                <div class="carousel-track">
+                    <article class="product-card">
+                        <img src="images/croissant.jpg" alt="Croissant artesanal" loading="lazy">
+                        <h3>Croissant</h3>
+                        <p>Hojaldre clásico recién horneado.</p>
+                        <button class="add-to-cart">Añadir al carrito</button>
+                    </article>
+                    <article class="product-card">
+                        <img src="images/baguette.jpg" alt="Baguette tradicional" loading="lazy">
+                        <h3>Baguette</h3>
+                        <p>Pan francés crujiente por fuera, suave por dentro.</p>
+                        <button class="add-to-cart">Añadir al carrito</button>
+                    </article>
+                    <article class="product-card">
+                        <img src="images/donut.jpg" alt="Donut glaseado" loading="lazy">
+                        <h3>Donut</h3>
+                        <p>Delicioso donut glaseado artesanal.</p>
+                        <button class="add-to-cart">Añadir al carrito</button>
+                    </article>
+                </div>
+                <button class="carousel-btn right" aria-label="Siguientes productos">&#10095;</button>
+            </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Panadería. Todos los derechos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Horario</h3>
+                    <p>Lunes a Sábado: 7:00 - 20:00</p>
+                    <p>Domingo: 8:00 - 14:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📞 (123) 456-7890</p>
+                    <p>📧 info@panaderia.com</p>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 Panadería Artesanal. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <script src="scripts/carousel.js"></script>
 </body>
 </html>
