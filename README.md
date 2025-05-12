@@ -20,15 +20,12 @@ Este proyecto es una página web completa para una panadería artesanal, diseña
 
 ### Página de Inicio
 ![Página de Inicio](./images/screenshots/inicio.png)
-*Página principal con carrusel de productos destacados*
 
 ### Catálogo de Productos
 ![Catálogo de Productos](./images/screenshots/catalogo.png)
-*Vista completa del catálogo con filtros por categorías*
 
 ### Formulario de Contacto
 ![Formulario de Contacto](./images/screenshots/contacto.png)
-*Formulario para consultas y pedidos especiales*
 
 ## Tecnologías Utilizadas
 
