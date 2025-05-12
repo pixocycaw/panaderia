@@ -1,6 +1,21 @@
 section {
     display: flex;
 }
+.nav-filtro {
+    display: flex;
+    padding: 1%;
+}
+.btn-filtro{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    width: 20%;
+}
 .product-card {
     min-width: 280px;
     max-width: 280px;
