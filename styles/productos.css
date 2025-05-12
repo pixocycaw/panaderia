@@ -16,6 +16,9 @@ section {
     transition: var(--transition);
     width: 20%;
 }
+.btn-filtro:hover {
+    background-color: #4CAF50;
+}
 .product-card {
     min-width: 280px;
     max-width: 280px;
