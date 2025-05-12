@@ -1,9 +1,28 @@
+@media (max-width: 1450px) {
+    .nosotros {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nosotros-img img{
+        max-width: 70%;
+        min-width: 50%;
+        height: auto;
+        padding-top: 5%;
+    }
+}
+
 .nosotros {
     display: flex;
     padding: 5%;
 }
 
-.nosotros-img{
-    width: 70%;
+.nosotros-img img{
+    max-width: 70%;
+    min-width: 40%;
+    height: auto;
     padding-left: 10%;
+}
+
+.nosotros-p {
+    text-align: justify;
 }
