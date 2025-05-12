@@ -3,6 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartCount = document.querySelector('.cart-count');
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     
+    // Crear contenedor para notificaciones si no existe
+    let notificacionesContenedor = document.querySelector('.notificaciones-contenedor');
+    if (!notificacionesContenedor) {
+        notificacionesContenedor = document.createElement('div');
+        notificacionesContenedor.classList.add('notificaciones-contenedor');
+        document.body.appendChild(notificacionesContenedor);
+    }
+    
     // Inicializar contador del carrito desde localStorage
     let itemsInCart = localStorage.getItem('cartItems') ? parseInt(localStorage.getItem('cartItems')) : 0;
     cartCount.textContent = itemsInCart;
@@ -59,19 +67,21 @@ document.addEventListener('DOMContentLoaded', () => {
         mensaje.classList.add('cart-confirmation');
         mensaje.textContent = `¡${nombreProducto} añadido al carrito!`;
         
-        // Añadir al body
-        document.body.appendChild(mensaje);
+        // Añadir mensaje al contenedor de notificaciones
+        notificacionesContenedor.appendChild(mensaje);
         
-        // Eliminar después de la animación
+        // Hacer scroll al último mensaje
+        notificacionesContenedor.scrollTop = notificacionesContenedor.scrollHeight;
+        
+        // Eliminar mensaje después de un tiempo
         setTimeout(() => {
-            mensaje.classList.add('show');
+            mensaje.classList.add('removing');
             
-            setTimeout(() => {
-                mensaje.classList.remove('show');
-                setTimeout(() => {
-                    document.body.removeChild(mensaje);
-                }, 300);
-            }, 2000);
-        }, 10);
+            mensaje.addEventListener('animationend', () => {
+                if (notificacionesContenedor.contains(mensaje)) {
+                    notificacionesContenedor.removeChild(mensaje);
+                }
+            });
+        }, 3000);
     }
 }); 

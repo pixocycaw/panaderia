@@ -5,6 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightBtn = document.querySelector('.carousel-btn.right');
     const cards = Array.from(document.querySelectorAll('.product-card'));
     
+    // Crear contenedor para notificaciones si no existe
+    let notificacionesContenedor = document.querySelector('.notificaciones-contenedor');
+    if (!notificacionesContenedor) {
+        notificacionesContenedor = document.createElement('div');
+        notificacionesContenedor.classList.add('notificaciones-contenedor');
+        document.body.appendChild(notificacionesContenedor);
+    }
+    
     function setupInfiniteCarousel() {
         // Clonar productos para desplazamiento infinito
         const firstSetClone = cards.map(card => card.cloneNode(true));
@@ -109,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let itemsInCart = localStorage.getItem('cartItems') ? parseInt(localStorage.getItem('cartItems')) : 0;
     cartCount.textContent = itemsInCart;
     
+    // Añadir eventos a todos los botones "Añadir al carrito"
     document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', () => {
             itemsInCart++;
@@ -151,27 +160,28 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cartProducts', JSON.stringify(cartItems));
     }
     
-    // Función para mostrar notificación de confirmación
     function mostrarConfirmacion(nombreProducto) {
         // Crear un elemento de mensaje temporal
         const mensaje = document.createElement('div');
         mensaje.classList.add('cart-confirmation');
         mensaje.textContent = `¡${nombreProducto} añadido al carrito!`;
         
-        // Añadir al body
-        document.body.appendChild(mensaje);
+        // Añadir mensaje al contenedor de notificaciones
+        notificacionesContenedor.appendChild(mensaje);
         
-        // Eliminar después de animación
+        // Hacer scroll al último mensaje
+        notificacionesContenedor.scrollTop = notificacionesContenedor.scrollHeight;
+        
+        // Eliminar mensaje después de un tiempo
         setTimeout(() => {
-            mensaje.classList.add('show');
+            mensaje.classList.add('removing');
             
-            setTimeout(() => {
-                mensaje.classList.remove('show');
-                setTimeout(() => {
-                    document.body.removeChild(mensaje);
-                }, 300);
-            }, 2000);
-        }, 10);
+            mensaje.addEventListener('animationend', () => {
+                if (notificacionesContenedor.contains(mensaje)) {
+                    notificacionesContenedor.removeChild(mensaje);
+                }
+            });
+        }, 3000);
     }
     
     // Inicializar el carrusel
