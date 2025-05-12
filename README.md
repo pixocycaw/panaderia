@@ -27,6 +27,9 @@ Este proyecto es una página web completa para una panadería artesanal, diseña
 ### Formulario de Contacto
 ![Formulario de Contacto](./images/screenshots/contacto.png)
 
+### Página sobre Nosotros
+![Página sobre Nosotros](./images/screenshots/nosotros.png)
+
 ## Tecnologías Utilizadas
 
 - **HTML5**: Estructura semántica y accesible.
@@ -42,6 +45,7 @@ panaderia/
 ├── index.html              # Página principal
 ├── filtro.html             # Página de catálogo con filtros
 ├── formulario.html         # Página de contacto
+├── nosotros.html           # Página sobre nosotros
 ├── styles/                 # Archivos CSS
 │   ├── styles.css          # Estilos principales
 │   ├── carousel.css        # Estilos del carrusel
