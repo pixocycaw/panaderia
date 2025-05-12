@@ -1,3 +1,6 @@
+section {
+    display: flex;
+}
 .product-card {
     min-width: 280px;
     max-width: 280px;
