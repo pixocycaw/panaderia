@@ -1,119 +1,119 @@
 function FiltroConLe() {
-    document.getElementById("conle").hidden = false;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    document.getElementById("conle").style.display = "block"; 
+    document.getElementById("sinle").style.display = "none"; 
+    document.getElementById("dulce").style.display = "none"; 
+    document.getElementById("inte").style.display = "none"; 
+    document.getElementById("mama").style.display = "none"; 
+    document.getElementById("plano").style.display = "none"; 
+    document.getElementById("rusti").style.display = "none"; 
+    document.getElementById("espe").style.display = "none"; 
+    document.getElementById("cere").style.display = "none"; 
 }
 
 function FiltroSinLe() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = false;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    document.getElementById("conle").style.display = "none"; 
+    document.getElementById("sinle").style.display = "block"; 
+    document.getElementById("dulce").style.display = "none"; 
+    document.getElementById("inte").style.display = "none"; 
+    document.getElementById("mama").style.display = "none"; 
+    document.getElementById("plano").style.display = "none"; 
+    document.getElementById("rusti").style.display = "none"; 
+    document.getElementById("espe").style.display = "none"; 
+    document.getElementById("cere").style.display = "none"; 
 }
 
 function FiltroDulce() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = false;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    document.getElementById("conle").style.display = "none"; 
+    document.getElementById("sinle").style.display = "none"; 
+    document.getElementById("dulce").style.display = "block"; 
+    document.getElementById("inte").style.display = "none"; 
+    document.getElementById("mama").style.display = "none"; 
+    document.getElementById("plano").style.display = "none"; 
+    document.getElementById("rusti").style.display = "none"; 
+    document.getElementById("espe").style.display = "none"; 
+    document.getElementById("cere").style.display = "none"; 
 }
 
 function FiltroInte() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = false;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    document.getElementById("conle").style.display = "none"; 
+    document.getElementById("sinle").style.display = "none"; 
+    document.getElementById("dulce").style.display = "none"; 
+    document.getElementById("inte").style.display = "block"; 
+    document.getElementById("mama").style.display = "none"; 
+    document.getElementById("plano").style.display = "none"; 
+    document.getElementById("rusti").style.display = "none"; 
+    document.getElementById("espe").style.display = "none"; 
+    document.getElementById("cere").style.display = "none"; 
 }
 
 function FiltroMaMa() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = false;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    document.getElementById("conle").style.display = "none"; 
+    document.getElementById("sinle").style.display = "none"; 
+    document.getElementById("dulce").style.display = "none"; 
+    document.getElementById("inte").style.display = "none"; 
+    document.getElementById("mama").style.display = "block"; 
+    document.getElementById("plano").style.display = "none"; 
+    document.getElementById("rusti").style.display = "none"; 
+    document.getElementById("espe").style.display = "none"; 
+    document.getElementById("cere").style.display = "none";
 }
 
 function FiltroPlano() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = false;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    document.getElementById("conle").style.display = "none"; 
+    document.getElementById("sinle").style.display = "none"; 
+    document.getElementById("dulce").style.display = "none"; 
+    document.getElementById("inte").style.display = "none"; 
+    document.getElementById("mama").style.display = "none"; 
+    document.getElementById("plano").style.display = "block"; 
+    document.getElementById("rusti").style.display = "none"; 
+    document.getElementById("espe").style.display = "none"; 
+    document.getElementById("cere").style.display = "none"; 
 }
 
 function FiltroRusti() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = false;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = true;
+    document.getElementById("conle").style.display = "none"; 
+    document.getElementById("sinle").style.display = "none"; 
+    document.getElementById("dulce").style.display = "none"; 
+    document.getElementById("inte").style.display = "none"; 
+    document.getElementById("mama").style.display = "none"; 
+    document.getElementById("plano").style.display = "none"; 
+    document.getElementById("rusti").style.display = "none"; 
+    document.getElementById("espe").style.display = "block"; 
+    document.getElementById("cere").style.display = "none"; 
 }
 
 function FiltroEspe() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = false;
-    document.getElementById("cere").hidden = true;
+    document.getElementById("conle").style.display = "none"; 
+    document.getElementById("sinle").style.display = "none"; 
+    document.getElementById("dulce").style.display = "none"; 
+    document.getElementById("inte").style.display = "none"; 
+    document.getElementById("mama").style.display = "none"; 
+    document.getElementById("plano").style.display = "none"; 
+    document.getElementById("rusti").style.display = "none"; 
+    document.getElementById("espe").style.display = "block"; 
+    document.getElementById("cere").style.display = "none"; 
 }
 
 function FiltroCere() {
-    document.getElementById("conle").hidden = true;
-    document.getElementById("sinle").hidden = true;
-    document.getElementById("dulce").hidden = true;
-    document.getElementById("inte").hidden = true;
-    document.getElementById("mama").hidden = true;
-    document.getElementById("plano").hidden = true;
-    document.getElementById("rusti").hidden = true;
-    document.getElementById("espe").hidden = true;
-    document.getElementById("cere").hidden = false;
+    document.getElementById("conle").style.display = "none"; 
+    document.getElementById("sinle").style.display = "none"; 
+    document.getElementById("dulce").style.display = "none"; 
+    document.getElementById("inte").style.display = "none"; 
+    document.getElementById("mama").style.display = "none"; 
+    document.getElementById("plano").style.display = "none"; 
+    document.getElementById("rusti").style.display = "none"; 
+    document.getElementById("espe").style.display = "none"; 
+    document.getElementById("cere").style.display = "block"; 
 }
 
 function BorrarFiltro() {
-    document.getElementById("conle").hidden = false;
-    document.getElementById("sinle").hidden = false;
-    document.getElementById("dulce").hidden = false;
-    document.getElementById("inte").hidden = false;
-    document.getElementById("mama").hidden = false;
-    document.getElementById("plano").hidden = false;
-    document.getElementById("rusti").hidden = false;
-    document.getElementById("espe").hidden = false;
-    document.getElementById("cere").hidden = false;
+    document.getElementById("conle").style.display = "none"; 
+    document.getElementById("sinle").style.display = "none"; 
+    document.getElementById("dulce").style.display = "none"; 
+    document.getElementById("inte").style.display = "none"; 
+    document.getElementById("mama").style.display = "none"; 
+    document.getElementById("plano").style.display = "none"; 
+    document.getElementById("rusti").style.display = "none"; 
+    document.getElementById("espe").style.display = "none"; 
+    document.getElementById("cere").style.display = "none"; 
 }
