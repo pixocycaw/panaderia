@@ -76,3 +76,8 @@ section {
     background-color: var(--primary-dark);
     transform: translateY(-2px);
 }
+
+/* Animation for add to cart button */
+.add-to-cart.added {
+    background-color: #4CAF50; /* Green success color */
+}

@@ -1,0 +1,64 @@
+/* Estilos de notificación del carrito */
+.notificaciones-contenedor {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-left: 5px;
+    /* Para ocultar la barra de desplazamiento pero mantener funcionalidad */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.notificaciones-contenedor::-webkit-scrollbar {
+    width: 5px;
+}
+
+.notificaciones-contenedor::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.cart-confirmation {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.3s, transform 0.3s;
+    max-width: 300px;
+    animation: slide-in 0.3s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+.cart-confirmation.removing {
+    animation: slide-out 0.3s forwards;
+} 
