@@ -65,6 +65,10 @@ header {
     color: var(--primary-dark);
 }
 
+nav {
+    justify-self: center;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -83,6 +87,11 @@ nav a:hover,
 nav a[aria-current="page"] {
     color: var(--primary-color);
     background-color: var(--background-light);
+}
+
+.header-actions {
+    justify-self: end;
+    margin-right: 1rem;
 }
 
 .cart-btn {
@@ -198,6 +207,7 @@ footer {
 
     .header-actions {
         justify-self: center;
+        margin-right: 0;
     }
 
     .hero h1 {
@@ -218,4 +228,34 @@ footer {
 
 .hero, .products-carousel {
     animation: fadeIn 1s ease-out;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Update mobile styles */
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .logo-image {
+        height: 30px;
+    }
 }
