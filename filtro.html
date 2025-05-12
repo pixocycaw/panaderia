@@ -10,16 +10,21 @@
 <body>
     <header>
         <div class="logo">
-            <a href="/">Panadería Artesanal</a></div>
+            <a href="/" class="logo-container">
+                <img src="images/logo.png" alt="Logo Panadería Artesanal" class="logo-image">
+                <span class="logo-text">Panadería Artesanal</span>
+            </a>
+        </div>
 
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="/" aria-current="page">Productos</a></li>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/filtro.html" aria-current="page">Productos</a></li>
                 <li><a href="#">Nosotros</a></li>
-                <li><a href="formulario.html">Contacto</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
+
         <div class="header-actions">
             <button class="cart-btn" aria-label="Ver carrito">
                 <span class="cart-icon">🛒</span>
@@ -129,7 +134,19 @@
     </main>
     <footer>
         <div class="container">
-            <p>&copy; 2025 Panadería. Todos los derechos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Horario</h3>
+                    <p>Lunes a Sábado: 7:00 - 20:00</p>
+                    <p>Domingo: 8:00 - 14:00</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>📞 (123) 456-7890</p>
+                    <p>📧 info@panaderia.artesanal.com</p>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Panadería Artesanal. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>

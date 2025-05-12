@@ -119,7 +119,7 @@
     right: 0;
 }
 
-/* Responsive Design */
+/* Diseño adaptable */
 @media (max-width: 768px) {
     .products-carousel {
         padding: 3rem 1rem;
@@ -146,7 +146,7 @@
     }
 }
 
-/* Loading Animation */
+/* Animación de carga */
 @keyframes shimmer {
     0% {
         background-position: -200% 0;
