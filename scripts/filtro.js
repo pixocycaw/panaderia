@@ -1,5 +1,5 @@
 // Función para mostrar solo productos de una categoría específica
-function mostrarCategoria(categoria) {
+/* function mostrarCategoria(categoria) {
     // Ocultar todos los productos primero
     const todosProductos = document.querySelectorAll('.product-card');
     todosProductos.forEach(producto => {
@@ -19,7 +19,7 @@ function BorrarFiltro() {
     todosProductos.forEach(producto => {
         producto.style.display = 'block';
     });
-}
+} */
 
 // Funciones específicas para cada categoría
 function FiltroConLe() {
@@ -131,13 +131,13 @@ function FiltroCere() {
 }
 
 function BorrarFiltro() {
-    document.getElementById("conle").style.display = "none"; 
-    document.getElementById("sinle").style.display = "none"; 
-    document.getElementById("dulce").style.display = "none"; 
-    document.getElementById("inte").style.display = "none"; 
-    document.getElementById("mama").style.display = "none"; 
-    document.getElementById("plano").style.display = "none"; 
-    document.getElementById("rusti").style.display = "none"; 
-    document.getElementById("espe").style.display = "none"; 
-    document.getElementById("cere").style.display = "none"; 
+    document.getElementById("conle").style.display = "block"; 
+    document.getElementById("sinle").style.display = "block"; 
+    document.getElementById("dulce").style.display = "block"; 
+    document.getElementById("inte").style.display = "block"; 
+    document.getElementById("mama").style.display = "block"; 
+    document.getElementById("plano").style.display = "block"; 
+    document.getElementById("rusti").style.display = "block"; 
+    document.getElementById("espe").style.display = "block"; 
+    document.getElementById("cere").style.display = "block"; 
 }
