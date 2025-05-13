@@ -35,8 +35,6 @@ Este proyecto es una página web completa para una panadería artesanal, diseña
 - **HTML5**: Estructura semántica y accesible.
 - **CSS3**: Estilos modernos con variables CSS y diseño responsive.
 - **JavaScript**: Interactividad avanzada y manipulación del DOM.
-- **LocalStorage**: Almacenamiento del carrito de compras.
-- **Diseño Mobile First**: Garantizando una experiencia óptima en todos los dispositivos.
 
 ## Estructura del Proyecto
 
@@ -65,7 +63,7 @@ panaderia/
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/tuusuario/panaderia.git
+   git clone https://github.com/pixocycaw/panaderia.git
    cd panaderia
    ```
 
