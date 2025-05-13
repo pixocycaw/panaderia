@@ -86,4 +86,4 @@ panaderia/
 
 ---
 
-Desarrollado con ❤ © 2025
+Desarrollado con ❤ por Abel Rebollo Ibañez, Arantxa Quijada López y Stanislav Muntyan © 2025
