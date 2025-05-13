@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="/images/list-icon.png">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/nosotros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 <header>
@@ -40,22 +41,62 @@
         <h1>¿Quiénes somos nosotros?</h1>
         <p>Productos recién horneados todos los días con ingredientes de la mejor calidad.</p>
     </section>
+    
     <section class="nosotros">
-        <br>
         <article class="nosotros-p">
-            <h2>Una panadería de confianza</h2><br>
+            <h2>Una panadería de confianza</h2>
+            <div class="divider"></div>
             <p>
                 Somos una panadería artesanal fundada con la pasión por el pan bien hecho. Nuestro equipo está formado por panaderos que creen en el trabajo manual, los ingredientes naturales y el respeto por los procesos tradicionales de elaboración.
-                <br><br>
+            </p>
+            <p>
                 Cada día, madrugamos para preparar masas frescas que fermentan lentamente, sin aditivos ni prisas, siguiendo recetas que combinan lo clásico con toques creativos. Ofrecemos desde panes rústicos de masa madre hasta variedades dulces y especiales, siempre con el sabor y la textura que solo un producto artesanal puede ofrecer.
-                <br><br>
+            </p>
+            <p>
                 Más que una panadería, somos un espacio donde el pan une, acompaña y forma parte de la vida cotidiana. Queremos que nuestros clientes sientan el calor del horno en cada bocado y la cercanía de un producto hecho con mimo y honestidad.
             </p>
         </article>
-        <article class="nosotros-img">
-            <img src="images/nosotros.jpg" alt="nosotros">
+        <div class="nosotros-img">
+            <img src="images/nosotros.jpg" alt="nosotros" class="rounded-image">
+        </div>
+    </section>
+
+    <section class="valores">
+        <h2>Nuestros Valores</h2>
+        <div class="divider"></div>
+        <div class="valores-container">
+            <div class="valor-card">
+                <div class="valor-icon"><i class="fas fa-leaf"></i></div>
+                <h3>Ingredientes Naturales</h3>
+                <p>Utilizamos solo ingredientes frescos y naturales, sin conservantes ni aditivos artificiales, apostando por proveedores locales.</p>
+            </div>
+            <div class="valor-card">
+                <div class="valor-icon"><i class="fas fa-hands"></i></div>
+                <h3>Elaboración Artesanal</h3>
+                <p>Cada pieza es elaborada a mano, con paciencia y dedicación, respetando los tiempos de fermentación natural.</p>
+            </div>
+            <div class="valor-card">
+                <div class="valor-icon"><i class="fas fa-heart"></i></div>
+                <h3>Pasión por el Sabor</h3>
+                <p>Creemos que la calidad se siente en cada bocado. Nuestras recetas combinan tradición e innovación.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="historia">
+        <article class="historia-content">
+            <h2>Nuestra Historia</h2>
+            <div class="divider"></div>
+            <p>
+                Fundada en 2010 por una familia con tres generaciones de panaderos, nuestra panadería comenzó como un pequeño local con solo cinco variedades de pan. Con el tiempo, nos hemos convertido en un referente de la panadería artesanal en la ciudad, manteniendo siempre nuestros valores de calidad y tradición.
+            </p>
+            <p>
+                Hoy, nuestro obrador produce más de 30 tipos diferentes de panes y dulces, pero seguimos siendo fieles a nuestra filosofía: hacer pan como se hacía antes, con tiempo y cariño.
+            </p>
         </article>
-        <br>
+        <div class="historia-img">
+            <img src="images/brioche.jpg" alt="historia de la panadería" class="rounded-image">
+        </div>
     </section>
 </main>
 <footer>
@@ -63,13 +104,21 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Horario</h3>
-                <p>Lunes a Sábado: 7:00 - 20:00</p>
-                <p>Domingo: 8:00 - 14:00</p>
+                <p><i class="far fa-clock"></i> Lunes a Sábado: 7:00 - 20:00</p>
+                <p><i class="far fa-clock"></i> Domingo: 8:00 - 14:00</p>
             </div>
             <div class="footer-section">
                 <h3>Contacto</h3>
-                <p>📞 (123) 456-7890</p>
-                <p>📧 info@panaderia.artesanal.com</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@panaderia.artesanal.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </div>
         <p class="copyright">&copy; 2025 Panadería Artesanal. Todos los derechos reservados.</p>

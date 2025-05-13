@@ -1,28 +1,170 @@
 @media (max-width: 1450px) {
-    .nosotros {
+    .nosotros, .historia {
         flex-direction: column;
         align-items: center;
     }
-    .nosotros-img img{
-        max-width: 70%;
-        min-width: 50%;
+    .nosotros-img img, .historia-img img {
+        max-width: 60%;
+        min-width: 40%;
         height: auto;
         padding-top: 5%;
+        padding-left: 0;
+    }
+    .valores-container {
+        grid-template-columns: 1fr;
     }
 }
 
-.nosotros {
+@media (max-width: 768px) {
+    .valores-container {
+        grid-template-columns: 1fr;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    .nosotros-img, .historia-img {
+        width: 100%;
+        text-align: center;
+    }
+    .nosotros-img img, .historia-img img {
+        padding-left: 0;
+    }
+}
+
+body {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.nosotros, .historia {
     display: flex;
     padding: 5%;
+    align-items: center;
+    gap: 2rem;
 }
 
-.nosotros-img img{
-    max-width: 70%;
-    min-width: 40%;
+.nosotros-img, .historia-img {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.nosotros-img img, .historia-img img {
+    max-width: 100%;
     height: auto;
-    padding-left: 10%;
+    padding-left: 0;
+    object-fit: cover;
+    width: 85%;
 }
 
-.nosotros-p {
+.nosotros-p, .historia-content {
     text-align: justify;
+    flex: 1.2;
+    font-size: 1.15rem;
+}
+
+h2 {
+    color: #8B4513;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+.divider {
+    height: 3px;
+    width: 60px;
+    background-color: #D2B48C;
+    margin-bottom: 1.5rem;
+}
+
+.rounded-image {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Valores section */
+.valores {
+    padding: 5%;
+    background-color: #FDF5E6;
+    text-align: center;
+}
+
+.valores-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.valor-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.valor-card p {
+    font-size: 1.1rem;
+}
+
+.valor-icon {
+    font-size: 2.2rem;
+    color: #D2B48C;
+    margin-bottom: 1rem;
+}
+
+.valor-card h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+}
+
+/* Footer styling */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    font-size: 1.1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: #D2B48C;
+    font-size: 1.5rem;
+}
+
+.footer-section i {
+    margin-right: 8px;
+    color: #D2B48C;
+}
+
+/* Hero section enhancement */
+.hero {
+    background-color: rgba(139, 69, 19, 0.8);
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
