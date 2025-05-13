@@ -25,7 +25,7 @@ Este proyecto es una página web completa para una panadería artesanal, diseña
 ![Catálogo de Productos](./images/screenshots/catalogo.png)
 
 ### Página sobre Nosotros
-![nosotros](https://github.com/user-attachments/assets/6c9b6825-b1e9-4c9b-9a44-9b28b6c02a89)
+![nosotros](./images/screenshots/nosotros.png)
 
 ### Formulario de Contacto
 ![Formulario de Contacto](./images/screenshots/contacto.png)
