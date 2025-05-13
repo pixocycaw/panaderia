@@ -5,14 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightBtn = document.querySelector('.carousel-btn.right');
     const cards = Array.from(document.querySelectorAll('.product-card'));
     
-    // Crear contenedor para notificaciones si no existe
-    let notificacionesContenedor = document.querySelector('.notificaciones-contenedor');
-    if (!notificacionesContenedor) {
-        notificacionesContenedor = document.createElement('div');
-        notificacionesContenedor.classList.add('notificaciones-contenedor');
-        document.body.appendChild(notificacionesContenedor);
-    }
-    
     function setupInfiniteCarousel() {
         // Clonar productos para desplazamiento infinito
         const firstSetClone = cards.map(card => card.cloneNode(true));
@@ -83,8 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
         centerCarousel(false);
     });
-    
-    
     
     // Inicializar el carrusel
     centerCarousel();
